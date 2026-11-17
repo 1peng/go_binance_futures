@@ -132,7 +132,7 @@ func (pusher Slack) TestPusher() {
   text := `
 > Test
 > push test success
-> author <sorry510sf@gmail.com>`
+`
   SlackApi(text, pusher)
 }
 
@@ -147,8 +147,7 @@ func (pusher Slack) FuturesOpenOrder(params FuturesOrderParams) {
 >{futures.status}：%s
 >{futures.error}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
 	text = fmt.Sprintf(lang.LangMatch(text),
 		params.Symbol + params.Title,
@@ -177,8 +176,7 @@ func (pusher Slack) FuturesCloseOrder(params FuturesOrderParams) {
 >{futures.status}：%s
 >{futures.error}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
 	text = fmt.Sprintf(lang.LangMatch(text),
 		params.Symbol + params.Title,
@@ -204,8 +202,7 @@ func (pusher Slack) FuturesNotice(params FuturesNoticeParams) {
 >{futures.price}：%f
 >{futures.auto_order}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -225,8 +222,7 @@ func (pusher Slack) FuturesListenKlineBase(params FuturesListenParams) {
 >{futures.price}：%f
 >{futures.remarks}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -248,8 +244,7 @@ func (pusher Slack) FuturesListenKlineKc(params FuturesListenParams) {
 >{futures.target_all_profit_price}：%f
 >{futures.desired_price}：%f
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -273,8 +268,7 @@ func (pusher Slack) FuturesListenKlineCustom(params FuturesListenParams) {
 >{futures.time}：%s
 
 >%s
-
-> author <sorry510sf@gmail.com>`
+`
   
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -295,8 +289,7 @@ func (pusher Slack) FuturesListenFundingRate(params FuturesListenParams) {
 >{futures.price}：%f
 >{futures.remarks}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -319,8 +312,7 @@ func (pusher Slack) SpotOrder(params SpotOrderParams) {
 >{spot.status}：%s
 >{spot.error}：%s
 >{spot.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
     lang.Lang("spot." + params.Side),
@@ -341,8 +333,7 @@ func (pusher Slack) SpotNotice(params SpotNoticeParams) {
 >{spot.price}：%f
 >{spot.auto_order}：%s
 >{spot.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -361,8 +352,7 @@ func (pusher Slack) SpotListenKlineBase(params SpotListenParams) {
 >{spot.price}：%f
 >{spot.remarks}：%s
 >{spot.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -386,8 +376,7 @@ func (pusher Slack) FuturesCustomStrategyTest(params FuturesTestParams) {
 >{futures.profit}：%f
 >{futures.strategy_name}：%s
 >{futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -413,8 +402,7 @@ func (pusher Slack) FuturesPositionConvert(params FuturesPositionConvertParams) 
 {futures.leverage}：%f
 {futures.profit}：%s
 {futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,
@@ -434,8 +422,7 @@ func (pusher Slack) FuturesPriceChangeNotice(params FuturesNoticeParams) {
 {futures.change_percent}：%.6f
 {futures.price}：%f
 {futures.time}：%s
-
-> author <sorry510sf@gmail.com>`
+`
 
   text = fmt.Sprintf(lang.LangMatch(text),
     params.Symbol + params.Title,

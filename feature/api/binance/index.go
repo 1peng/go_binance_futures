@@ -1326,8 +1326,7 @@ func sendFuturesWsNoDataAlert(noDataMinutes float64) {
 #### 超过 %.1f 分钟未收到任何数据包
 #### 告警阈值：2 分钟
 #### 告警频率：5 分钟一次
-
-> author <sorry510sf@gmail.com>`, noDataMinutes)
+`, noDataMinutes)
 
 	switch p := alertPusher.(type) {
 	case notify.DingDing:
